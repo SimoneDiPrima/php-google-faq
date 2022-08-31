@@ -51,11 +51,22 @@ $myArray=[
         <title>Document</title>
        </head>
        <body>
+        <div class="container">
+        <header>
+            <h2 class="ms-40 pt-10"  ><a href="www.google.it">GOOGLE</a> Privacy&Termini</h2>
+            <ul class="pt-20 d-flex-bottom">
+                <li class="margin-right-20"><a href="">Introduzione</a></li>
+                <li class="margin-right-20"><a href="">Norme sulla privacy</a></li>
+                <li class="margin-right-20"><a href="">Termini di Servizio</a></li>
+                <li class="margin-right-20"><a href="">Tecnologie</a></li>
+                <li class="active"><a href="">Domande Frequenti</a></li>
+           </ul>
+        </header>
        <?php foreach($myArray as $title => $paragraph) : ?>
             <h2 class="text-center"> <?php echo $title ?> </h2>
             <?php foreach($paragraph as $value) :?>
                 
-                    <p><?php echo $value ?>
+                    <p class="text-center"><?php echo $value ?>
             </p>
              
             <?php endforeach;?>
@@ -66,8 +77,38 @@ $myArray=[
             .text-center {
                 text-align:center;
             }
+            header{
+                height:100px;
+                background-color: lightgray;
+                border-bottom:2px solid dodgerblue;
+            }
+            .d-flex-bottom{
+                display:flex;
+               justify-content:flex-start;
+            }
+            .ms-40{
+            margin-left:40px;
+            }
+            .pt-20{padding-top:20px;}
+            .pt-10{
+                padding-top:10px;
+            }
+            .active{
+                cursor:pointer;
+                text-decoration: underline 5px dodgerblue;
+            }
+            .margin-right-20{
+                margin-right:20px;
+            }
+            ul li{
+                list-style-type: none;
+                font-weight:bolder;
+            }
+            .w-80{width:80%;}
             </style>
-        
+
+        </div>
+       
        </body>
        </html>
     
