@@ -48,30 +48,40 @@ $myArray=[
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <title>Document</title>
        </head>
        <body>
-        <div class="container">
-        <header>
-            <h2 class="ms-40 pt-10"  ><a href="www.google.it">GOOGLE</a> Privacy&Termini</h2>
-            <ul class="pt-20 d-flex-bottom">
-                <li class="margin-right-20"><a href="">Introduzione</a></li>
-                <li class="margin-right-20"><a href="">Norme sulla privacy</a></li>
-                <li class="margin-right-20"><a href="">Termini di Servizio</a></li>
-                <li class="margin-right-20"><a href="">Tecnologie</a></li>
+        <header class="p-3 d-flex flex-column align-items-start">
+            <h2 class="col-6 ms-30"><a href="www.google.it">GOOGLE</a> Privacy&Termini</h2>
+            <ul class="d-flex-bottom col-6 justify-content-between color-gray">
+                <li class=""><a href="">Introduzione</a></li>
+                <li class=""><a href="">Norme sulla privacy</a></li>
+                <li class=""><a href="">Termini di Servizio</a></li>
+                <li class=""><a href="">Tecnologie</a></li>
                 <li class="active"><a href="">Domande Frequenti</a></li>
            </ul>
         </header>
-       <?php foreach($myArray as $title => $paragraph) : ?>
-            <h2 class="text-center"> <?php echo $title ?> </h2>
+        <div class="offset-1 col-10 mt-4">
+        <?php foreach($myArray as $title => $paragraph) : ?>
+            <h2> <?php echo $title ?> </h2>
             <?php foreach($paragraph as $value) :?>
                 
-                    <p class="text-center"><?php echo $value ?>
+                    <p><?php echo $value ?>
             </p>
              
             <?php endforeach;?>
         <?php endforeach;?>
+
+        </div>
+      
         <style>
+            *{
+                font-family: 'Roboto', sans-serif;
+            }
             a{text-decoration:none;
             color:dodgerblue;}
             .text-center {
@@ -86,14 +96,14 @@ $myArray=[
                 display:flex;
                justify-content:flex-start;
             }
-            .ms-40{
-            margin-left:40px;
+            .ms-30{
+            margin-left:30px;
             }
             .pt-20{padding-top:20px;}
             .pt-10{
                 padding-top:10px;
             }
-            .active{
+            .active:hover{
                 cursor:pointer;
                 text-decoration: underline 5px dodgerblue;
             }
@@ -105,6 +115,10 @@ $myArray=[
                 font-weight:bolder;
             }
             .w-80{width:80%;}
+            .color-gray{
+                color:rgb(60, 64, 67);}
+           
+
             </style>
 
         </div>
